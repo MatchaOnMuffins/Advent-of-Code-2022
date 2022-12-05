@@ -28,10 +28,9 @@ with open('day5.in', 'r') as f:
         containerCount = int(m.group(1))
         fromStack = int(m.group(2))
         toStack = int(m.group(3))
-        # print('Move {} containers from stack {} to stack {}'.format(containerCount, fromStack, toStack))
         for j in range(containerCount):
             stacks[toStack - 1].append(stacks[fromStack - 1].pop())
 ans = ''
 for i in range(9):
     ans += stacks[i][-1]
-print('Answer:', ans)
+print(ans)
